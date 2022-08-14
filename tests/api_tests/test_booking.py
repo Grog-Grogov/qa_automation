@@ -13,17 +13,7 @@ def test_booking_post(base_url):
 
 
 
-'''''
 
-def test_booking_put(base_url):
-    info = {"firstname": "Jim", "lastname": "Brown", "totalprice": 111, "depositpaid": True,
-            "bookingdates": {"checkin": "2023-01-01", "checkout": "2023-01-01"}, "additionalneeds": "Breakfast"}
-    res = requests.put(base_url, 'info')
-    assert res.status_code == 200
-    assert res.json().get("booking") == info
-
-
-'''''
 
 @pytest.mark.regress
 def test_booking_delete_(base_url):
